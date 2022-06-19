@@ -1,6 +1,20 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  //lopps through array 
+  for (i = 0; i < array.length - 1; i++) {
+    const targetdiif = target - array[i];
+    for (j = (i + 1); j < array.length; j++) {
+      if (array[j] === targetdiif) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
+
+console.log(hasTargetSum([3, 8, 12, 4, 11, 7], 10));
+
+
 
 /* 
   Write the Big O time complexity of your function here
